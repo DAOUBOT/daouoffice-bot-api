@@ -1,7 +1,7 @@
 
 
 # Node.js DaouOffice Bot Api
-[![Bot API](https://img.shields.io/badge/Bot%20API-v.0.0.7-00aced.svg)](http://bot.terracetech.co.kr)
+[![Bot API](https://img.shields.io/badge/Bot%20API-v.0.0.8-00aced.svg)](https://github.com/DAOUBOT/daouoffice-bot-api/blob/master/docs/api.md)
 
 Node.js module to interact with official DaouOffice Bot API. 
 A bot apikey is required and can be obtained by http://bot.terracetech.co.kr:8000
@@ -15,7 +15,7 @@ npm install --save daouoffice-bot-api
 ## Usage
 
 ```js
-const DaouBot = require('daouoffice-bot-api');
+const DaouOfficeBot = require('daouoffice-bot-api');
 
 // http://bot.terracetech.co.kr:8000에서 발급받은 apikey를 입력
 const options = {
@@ -25,7 +25,7 @@ const options = {
 };
 
 // Create a bot
-const bot = new DaouBot(options);
+const bot = new DaouOfficeBot(options);
 
 // express start
 bot.start();

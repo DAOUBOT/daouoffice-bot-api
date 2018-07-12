@@ -13,14 +13,14 @@ DaouOfficeBot
 * [DaouOfficeBot](#DaouOfficeBot)
     * [new DaouBot([options])](#new_DaouBot_new)
     * _instance_
-        * [start()](#DaouBot+start)
-        * [.on(event, listener)](#DaouBot+on)
-        * [sendMessage(fromId, toId, text)](#DaouBot+sendMessage)
+        * [start()](#DaouOfficeBot+start)
+        * [.on(event, listener)](#DaouOfficeBot+on)
+        * [sendMessage(fromId, toId, text)](#DaouOfficeBot+sendMessage)
         
         
 <a name="new_DaouBot_new"></a>
 
-### new DaouBot([options])
+### new DaouOfficeBot([options])
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
@@ -29,10 +29,15 @@ DaouOfficeBot
 | [options.port] | <code>Number</code> | <code>3000</code> | bot server port |
 | [options.apiKey] | <code>String</code> |  | bot api key |
 
-<a name="DaouBot+on"></a>
+<a name="DaouOfficeBot+start"></a>  
+
+### daouBot.start()
+express start
+
+<a name="DaouOfficeBot+on"></a>
 
 ### daouBot.on(event, listener)
-Add listener for the specified [event](https://github.com/yagop/node-telegram-bot-api/blob/master/doc/usage.md#events).
+Add listener for the specified [event](https://github.com/DAOUBOT/daouoffice-bot-api/blob/master/docs/usage.md#events).
 This is the usual `emitter.on()` method.
 
 **Kind**: instance method of [<code>DaouOfficeBot</code>](#DaouOfficeBot)  
@@ -46,9 +51,9 @@ This is the usual `emitter.on()` method.
 | event | <code>String</code> | 
 | listener | <code>function</code> | 
 
-<a name="TelegramBot+sendMessage"></a>
+<a name="DaouOfficeBot+sendMessage"></a>
 
-### telegramBot.sendMessage(chatId, text, [options]) ⇒ <code>Promise</code>
+### daouBot.sendMessage(chatId, text, [options]) ⇒ <code>Promise</code>
 Send text message.
 
 **Kind**: instance method of [<code>DaouOfficeBot</code>](#DaouOfficeBot)  

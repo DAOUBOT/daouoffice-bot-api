@@ -9,7 +9,7 @@ const publicUrl = '/go/public/bot/';
 
 let Promise = require('bluebird');
 
-class DaouBot extends EventEmitter{
+class DaouOfficeBot extends EventEmitter{
 	constructor(bot = {}) {
 		super();
 		this.app = express();
@@ -142,4 +142,4 @@ class DaouBot extends EventEmitter{
 	}
 }
 
-module.exports = DaouBot;
+module.exports = DaouOfficeBot;
