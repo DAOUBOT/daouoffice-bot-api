@@ -1,6 +1,6 @@
 {
   "name": "daouoffice-bot-api",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "DaouOffice Bot API",
   "main": "./index.js",
   "scripts": {
@@ -17,5 +17,9 @@
     "express": "3.2.6",
     "request": "^2.87.0",
     "request-promise": "^4.2.2"
+  },
+  "repository": {
+     "type": "git",
+     "url": "https://github.com/DAOUBOT/daouoffice-bot-api.git" 
   }
 }

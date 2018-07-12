@@ -1,7 +1,7 @@
 
 
 # Node.js DaouOffice Bot Api
-[![Bot API](https://img.shields.io/badge/Bot%20API-v.0.0.5-00aced.svg)](http://bot.terracetech.co.kr)
+[![Bot API](https://img.shields.io/badge/Bot%20API-v.0.0.6-00aced.svg)](http://bot.terracetech.co.kr)
 
 Node.js module to interact with official DaouOffice Bot API. 
 A bot apikey is required and can be obtained by http://bot.terracetech.co.kr:8000
