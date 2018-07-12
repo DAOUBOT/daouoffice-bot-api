@@ -1,3 +1,7 @@
+.git/
 docs/
 example/
 node_modules/
+
+#dotfiles
+.project
