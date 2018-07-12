@@ -53,7 +53,7 @@ This is the usual `emitter.on()` method.
 
 <a name="DaouOfficeBot+sendMessage"></a>
 
-### daouBot.sendMessage(chatId, text, [options]) ⇒ <code>Promise</code>
+### daouBot.sendMessage(fromId, toId, text) ⇒ <code>Promise</code>
 Send text message.
 
 **Kind**: instance method of [<code>DaouOfficeBot</code>](#DaouOfficeBot)  
