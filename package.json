@@ -1,0 +1,21 @@
+{
+  "name": "daouoffice-bot-api",
+  "version": "0.0.4",
+  "description": "DaouOffice Bot API",
+  "main": "./index.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [
+	"daouoffice bot api"
+  ],
+  "author": "hooooo<ghpark@daou.co.kr>",
+  "license": "MIT",
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "body-parser": "^1.18.3",
+    "express": "3.2.6",
+    "request": "^2.87.0",
+    "request-promise": "^4.2.2"
+  }
+}
