@@ -32,15 +32,15 @@ class DaouBot extends EventEmitter{
 		
 		//getMessage에 대한 이벤트 호출(봇이 메시지를 받을때)
 		this.app.post('/getMessage',(req,res) => {
-			this.getMessage(req.body);
+			this._getMessage(req.body);
 		});
 		
 		this.app.post('/startBot',(req,res) => {
-			this.startBot(req.body);
+			this._startBot(req.body);
 		});
 		
 		this.app.post('/endBot',(req,res) => {
-			this.endBot(req.body);
+			this._endBot(req.body);
 		});
 		
 		this._webServer = http.createServer(this.app);
@@ -63,15 +63,15 @@ class DaouBot extends EventEmitter{
 	    super.on(event, listener);
 	}
 	
-	getMessage(result){
+	_getMessage(result){
 		super.emit('getMessage',result);
 	}
 	
-	startBot(result){
+	_startBot(result){
 		super.emit('startBot',result);
 	}
 	
-	endBot(result){
+	_endBot(result){
 		super.emit('endBot',result);
 	}
 	
@@ -106,7 +106,7 @@ class DaouBot extends EventEmitter{
     * @see 
     */
 	_buildURL(_path){
-		return this.daouApiUrl + publicUrl + _path;
+		return this.daouApiUrl + ":8000" + publicUrl + _path;
 	}
 	
 	/**

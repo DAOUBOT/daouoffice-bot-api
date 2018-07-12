@@ -1,6 +1,6 @@
 const DaouBot = require('../src/daou-bot-api');
 const options = {
-	"daouApiUrl" : "http://bot.terracetech.co.kr:8000",
+	"daouApiUrl" : "http://bot.terracetech.co.kr",
 	"port" : 3000,
 	"apiKey" : "nMxmNHAPuUxg6SB2epkX2w=="
 };
