@@ -34,19 +34,42 @@ class DaouOfficeBot extends EventEmitter{
 		this.app.post('/getMessage',(req,res) => {
 			this._getMessage(req.body);
 		});
-		
+		//startBot에 대한 이벤트 호출(봇이 입장했을때)
 		this.app.post('/startBot',(req,res) => {
 			this._startBot(req.body);
 		});
-		
+		//endBot에 대한 이벤트 호출(봇이 퇴장했을때)
 		this.app.post('/endBot',(req,res) => {
 			this._endBot(req.body);
 		});
-		
-		this._webServer = http.createServer(this.app);
 	}
 	
+	/**
+	 * express 의 route 설정 (get)
+	 * @param  {String} path
+	 * @param  {Function} callback
+	 * @see http://expressjs.com/ko/api.html
+	 */
+	setGetRoute(path,callback){
+		this.app.get(path,callback);
+	}
+	
+	/**
+	 * express 의 route 설정 (post)
+	 * @param  {String} path
+	 * @param  {Function} callback
+	 * @see http://expressjs.com/ko/api.html
+	 */
+	setPostRoute(path,callback){
+		this.app.post(path,callback);
+	}
+	
+	/**
+	 * express 를 구동한다.
+	 * @see http://expressjs.com/ko/api.html
+	 */
 	start() {
+		this._webServer = http.createServer(this.app);
 		this._webServer.listen(this.app.get('port'), () => {
 			 console.log('WebHook listening on port : ' + this.app.get('port'));
 		});
@@ -93,7 +116,7 @@ class DaouOfficeBot extends EventEmitter{
 	        },
 	        "message" : {
 	            "text" : text
-	        }	
+	        }
 		}
 		return this._request('buddies',param);
 	}

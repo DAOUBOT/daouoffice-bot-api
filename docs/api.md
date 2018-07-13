@@ -29,6 +29,37 @@ DaouOfficeBot
 | [options.port] | <code>Number</code> | <code>3000</code> | bot server port |
 | [options.apiKey] | <code>String</code> |  | bot api key |
 
+<a name="DaouOfficeBot+setGetRoute"></a>  
+
+### daouBot.setGetRoute(path,callback)
+Routes HTTP GET requests to the specified path with the specified callback functions.
+
+**Kind**: instance method of [<code>DaouOfficeBot</code>](#DaouOfficeBot)  
+**See**
+
+- http://expressjs.com/ko/api.html
+
+| Param | Type |
+| --- | --- |
+| path | <code>String</code> | 
+| callback | <code>function</code> |
+
+<a name="DaouOfficeBot+setPostRoute"></a> 
+
+### daouBot.setPostRoute(path,callback)
+Routes HTTP POST requests to the specified path with the specified callback functions.
+
+**Kind**: instance method of [<code>DaouOfficeBot</code>](#DaouOfficeBot)  
+**See**
+
+- http://expressjs.com/ko/api.html
+
+| Param | Type |
+| --- | --- |
+| path | <code>String</code> | 
+| callback | <code>function</code> |
+
+
 <a name="DaouOfficeBot+start"></a>  
 
 ### daouBot.start()

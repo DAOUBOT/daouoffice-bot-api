@@ -1,12 +1,22 @@
 const DaouOfficeBot = require('../src/daou-bot-api');
+const user = require('./routes/user');
 const options = {
 	"daouApiUrl" : "http://bot.terracetech.co.kr",
 	"port" : 3000,
 	"apiKey" : "nMxmNHAPuUxg6SB2epkX2w=="
 };
 const daoubot = new DaouOfficeBot(options);
+
+// express routing
+daoubot.setGetRoute('/user',user.list);
+
+// express start
 daoubot.start();
+
+// get message
 daoubot.on('getMessage',(result) => {
+	
+	//send message
 	daoubot.sendMessage(result.to,result.from,result.message)
 	.then(function(o){
 		console.log(o);
