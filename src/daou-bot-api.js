@@ -86,18 +86,6 @@ class DaouOfficeBot extends EventEmitter{
 	    super.on(event, listener);
 	}
 	
-	_getMessage(result){
-		super.emit('getMessage',result);
-	}
-	
-	_startBot(result){
-		super.emit('startBot',result);
-	}
-	
-	_endBot(result){
-		super.emit('endBot',result);
-	}
-	
 	/**
 	 * 텍스트 메시지를 전송한다.
 	 * @param  {String} 해당봇의 id 
@@ -119,6 +107,18 @@ class DaouOfficeBot extends EventEmitter{
 	        }
 		}
 		return this._request('buddies',param);
+	}
+	
+	_getMessage(result){
+		super.emit('getMessage',result);
+	}
+	
+	_startBot(result){
+		super.emit('startBot',result);
+	}
+	
+	_endBot(result){
+		super.emit('endBot',result);
 	}
 	
    /**
