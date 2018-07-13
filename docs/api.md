@@ -13,6 +13,8 @@ DaouOfficeBot
 * [DaouOfficeBot](#DaouOfficeBot)
     * [new DaouBot([options])](#new_DaouBot_new)
     * _instance_
+        * [setGetRoute(path,callback)](#DaouOfficeBot+setGetRoute)
+        * [setPostRoute(path,callback)](#DaouOfficeBot+setPostRoute)		
         * [start()](#DaouOfficeBot+start)
         * [.on(event, listener)](#DaouOfficeBot+on)
         * [sendMessage(fromId, toId, text)](#DaouOfficeBot+sendMessage)
