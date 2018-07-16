@@ -30,9 +30,9 @@ class DaouOfficeBot extends EventEmitter{
 		this.app.use(this.app.router);
 		this.app.use(express.static(path.join(__dirname, 'public')));
 		
-		//getMessage에 대한 이벤트 호출(봇이 메시지를 받을때)
-		this.app.post('/getMessage',(req,res) => {
-			this._getMessage(req.body);
+		//message에 대한 이벤트 호출(봇이 메시지를 받을때)
+		this.app.post('/message',(req,res) => {
+			this._message(req.body);
 		});
 		//startBot에 대한 이벤트 호출(봇이 입장했을때)
 		this.app.post('/startBot',(req,res) => {
@@ -88,19 +88,19 @@ class DaouOfficeBot extends EventEmitter{
 	
 	/**
 	 * 텍스트 메시지를 전송한다.
-	 * @param  {String} 해당봇의 id 
+	 * @param  {String} 보낼곳의 방 종류 (SINGLE , ROOM) 
 	 * @param  {String} 보낼곳의 방id 나 메시지 수신자의 id
 	 * @param  {String} 보낼 메시지 내용
 	 * @return {Promise}
 	 */
-	sendMessage(fromId,toId,text){
+	sendMessage(chatType,toId,text){
 		let param = {
 			"from" : {
-	            "id" : fromId,
 	            "apiKey":this.apiKey
 	        },
 	        "to" : {
-	            "id" : toId
+	            "id" : toId,
+	            "chatType" : chatType
 	        },
 	        "message" : {
 	            "text" : text
@@ -109,8 +109,8 @@ class DaouOfficeBot extends EventEmitter{
 		return this._request('buddies',param);
 	}
 	
-	_getMessage(result){
-		super.emit('getMessage',result);
+	_message(result){
+		super.emit('message',result);
 	}
 	
 	_startBot(result){

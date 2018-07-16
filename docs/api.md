@@ -17,7 +17,7 @@ DaouOfficeBot
         * [setPostRoute(path,callback)](#DaouOfficeBot+setPostRoute)		
         * [start()](#DaouOfficeBot+start)
         * [.on(event, listener)](#DaouOfficeBot+on)
-        * [sendMessage(fromId, toId, text)](#DaouOfficeBot+sendMessage)
+        * [sendMessage(chatType, toId, text)](#DaouOfficeBot+sendMessage)
         
         
 <a name="new_DaouBot_new"></a>
@@ -86,7 +86,7 @@ This is the usual `emitter.on()` method.
 
 <a name="DaouOfficeBot+sendMessage"></a>
 
-### daouBot.sendMessage(fromId, toId, text) ⇒ <code>Promise</code>
+### daouBot.sendMessage(chatType, toId, text) ⇒ <code>Promise</code>
 Send text message.
 
 **Kind**: instance method of [<code>DaouOfficeBot</code>](#DaouOfficeBot)  
@@ -94,6 +94,6 @@ Send text message.
 
 | Param | Type | Description |
 | --- | --- | --- |
-| fromId | <code>String</code> | Unique identifier for the message recipient(botId) |
+| chatType | <code>String</code> |Types of chat rooms that contain bots (SINGLE or ROOM) |
 | toId | <code>String</code> | Unique identifier for the message recipient(userId or roomId) |
 | text | <code>String</code> | Text of the message to be sent |

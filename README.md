@@ -31,10 +31,10 @@ const bot = new DaouOfficeBot(options);
 bot.start();
 
 // Listen for any kind of message.
-bot.on('getMessage',(result) => {
+bot.on('message',(result) => {
 
 	//send message (echo)
-	bot.sendMessage(result.to,result.from,result.message)
+	bot.sendMessage(result.chatType,result.from,result.message)
 	.then(function(result){
 		console.log(result);
 	}).catch(function(err){

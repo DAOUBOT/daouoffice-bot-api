@@ -14,10 +14,9 @@ daoubot.setGetRoute('/user',user.list);
 daoubot.start();
 
 // get message
-daoubot.on('getMessage',(result) => {
-	
+daoubot.on('message',(result) => {
 	//send message
-	daoubot.sendMessage(result.to,result.from,result.message)
+	daoubot.sendMessage(result.chatType,result.from,result.message)
 	.then(function(o){
 		console.log(o);
 	}).catch(function(err){
