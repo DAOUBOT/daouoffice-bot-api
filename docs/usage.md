@@ -1,6 +1,7 @@
 # Usage
 
 * [Events](#events)
+* [Available types](#availableTypes)
 
 <a name="events"></a>
 
@@ -11,6 +12,8 @@ that emits the following events:
 1. `message`: Received a new incoming [Message](#message) of any kind
 1. `startBot`: Received a new incoming bot and room Info
 1. `endBot`: Received a new incoming bot and room Info
+
+<a name="availableTypes"></a>
 
 ## Available types
 All types used in the Daouoffice Bot API responses are represented as JSON-objects.
