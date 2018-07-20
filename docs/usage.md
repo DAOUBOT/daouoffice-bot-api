@@ -25,5 +25,5 @@ All types used in the Daouoffice Bot API responses are represented as JSON-objec
 | Field | Type | Description |
 | --- | --- | --- |
 | chatType | String |Types of chat rooms that contain bots (SINGLE or ROOM) |
-| toId | String | Unique identifier for the message recipient(userId or roomId) |
-| text | String | Text of the message to be sent |
+| from | String | Unique identifier for the message recipient(userId or roomId) |
+| message | String | Text of the message to be sent |
