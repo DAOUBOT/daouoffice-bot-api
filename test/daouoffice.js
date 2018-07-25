@@ -19,7 +19,7 @@ describe('BDD style', function() {
   describe('Example', function() {
 	  describe('calculation', function() {
 		  it('1+1 should be 2', function() {
-		    	assert.equal(1+1, 2);
+		    	assert.equal(1+1, 3);
 		  });	
 	  });
   });

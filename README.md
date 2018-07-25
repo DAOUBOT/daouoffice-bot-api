@@ -1,7 +1,8 @@
 
 
 # Node.js DaouOffice Bot Api
-[![DaouOffice Bot API](https://img.shields.io/badge/DaouOffice%20Bot%20API-v.0.1.3-00aced.svg)](https://github.com/DAOUBOT/daouoffice-bot-api/blob/master/docs/api.md)
+[![DaouOffice Bot API](https://img.shields.io/badge/DaouOffice%20Bot%20API-v.0.1.3-00aced.svg)]
+[![Build Status](https://travis-ci.org/DAOUBOT/daouoffice-bot-api.svg?branch=master)](https://travis-ci.org/DAOUBOT/daouoffice-bot-api)(https://github.com/DAOUBOT/daouoffice-bot-api/blob/master/docs/api.md)
 [![Node Version](https://img.shields.io/node/v/passport.svg)](https://nodejs.org/en/)
 [![DaouOffice Version](https://img.shields.io/badge/DaouOffice(Custom)-%3E%3D%202.5.4.0-orange.svg)](http://bot.terracetech.co.kr)
 
