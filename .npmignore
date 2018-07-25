@@ -3,6 +3,7 @@
 docs/
 example/
 node_modules/
+test/
 
 #dotfiles
 .project
