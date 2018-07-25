@@ -5,7 +5,7 @@ const express = require('express')
   , EventEmitter = require('events')
   , request = require('request-promise');
 
-const publicUrl = '/go/public/bot/';
+const publicUrl = '/go/public/bot/'; 
 
 let Promise = require('bluebird');
 

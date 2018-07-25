@@ -1,4 +1,4 @@
-const DaouOfficeBot = require('../src/daou-bot-api');
+const DaouOfficeBot = require('../src/daouoffice');
 const user = require('./routes/user');
 const options = {
 	"daouApiUrl" : "http://bot.terracetech.co.kr",

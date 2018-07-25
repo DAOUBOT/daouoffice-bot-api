@@ -1,1 +1,1 @@
-module.exports = require('./src/daou-bot-api');
+module.exports = require('./src/daouoffice');
