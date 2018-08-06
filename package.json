@@ -1,14 +1,15 @@
 {
   "name": "daouoffice-bot-api",
-  "version": "0.1.3",
+  "version": "0.1.5",
   "description": "DaouOffice Bot API",
   "main": "./index.js",
   "scripts": {
-    "start": "node app.js",
-    "test" : "mocha"
+    "start": "node index.js",
+    "test": "mocha",
+    "report" : "mocha --reporter mochawesome"
   },
   "keywords": [
-	"daouoffice bot api"
+    "daouoffice bot api"
   ],
   "author": "hooooo<ghpark@daou.co.kr>",
   "license": "MIT",
@@ -19,8 +20,13 @@
     "request": "^2.87.0",
     "request-promise": "^4.2.2"
   },
+  "devDependencies": {
+    "mocha": "^5.2.0",
+    "mochawesome": "^3.0.3",
+    "nock": "^9.4.3"
+  },
   "repository": {
-     "type": "git",
-     "url": "https://github.com/DAOUBOT/daouoffice-bot-api.git" 
+    "type": "git",
+    "url": "https://github.com/DAOUBOT/daouoffice-bot-api.git"
   }
 }

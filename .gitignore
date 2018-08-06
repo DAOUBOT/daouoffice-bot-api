@@ -1,3 +1,4 @@
 .settings/
+mochawesome-report/
 node_modules/
 .project

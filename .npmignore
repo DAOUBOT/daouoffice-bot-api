@@ -2,6 +2,7 @@
 .settings/
 docs/
 example/
+mochawesome-report/
 node_modules/
 test/
 

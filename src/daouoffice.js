@@ -14,7 +14,7 @@ class DaouOfficeBot extends EventEmitter{
 		super();
 		this.app = express();
 		this._webServer = null;
-		this.port = bot.port || 3000;
+		this.port = bot.botServerPort || 3000;
 		
 		this.apiKey = bot.apiKey;
 		this.daouApiUrl = bot.daouApiUrl;
@@ -71,7 +71,7 @@ class DaouOfficeBot extends EventEmitter{
 	start() {
 		this._webServer = http.createServer(this.app);
 		this._webServer.listen(this.app.get('port'), () => {
-			 console.log('WebHook listening on port : ' + this.app.get('port'));
+			 console.log('botserver listening on port : ' + this.app.get('port'));
 		});
 	}
 	
@@ -93,17 +93,13 @@ class DaouOfficeBot extends EventEmitter{
 	 * @param  {String} 보낼 메시지 내용
 	 * @return {Promise}
 	 */
-	sendMessage(chatType,toId,text){
+	sendMessage(chatKey,text){
 		let param = {
-			"from" : {
-	            "apiKey":this.apiKey
-	        },
-	        "to" : {
-	            "id" : toId,
-	            "chatType" : chatType
-	        },
+            "apiKey":this.apiKey,
+	        "chatKey" : chatKey,
 	        "message" : {
-	            "text" : text
+	        	"type" : "NORMAL",
+	            "content" : text
 	        }
 		}
 		return this._request('buddies',param);
@@ -158,6 +154,7 @@ class DaouOfficeBot extends EventEmitter{
 			.then(resp => {
 				return "ok";
 			}).catch(error => {
+				console.log(1111);
 				if (error) {
 					return error;
 				}

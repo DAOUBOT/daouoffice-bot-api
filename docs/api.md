@@ -28,7 +28,7 @@ DaouOfficeBot
 | --- | --- | --- | --- |
 | [options] | <code>Object</code> |  |  |
 | [options.daouApiUrl] | <code>String</code> |  | daouoffice server url |
-| [options.port] | <code>Number</code> | <code>3000</code> | bot server port |
+| [options.botServerPort] | <code>Number</code> | <code>3000</code> | bot server port |
 | [options.apiKey] | <code>String</code> |  | bot api key |
 
 <a name="DaouOfficeBot+setGetRoute"></a>  

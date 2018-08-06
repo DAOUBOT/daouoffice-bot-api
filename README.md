@@ -1,21 +1,19 @@
+Node.js DaouOffice Bot Api
+==========================
 
+[![DaouOffice Bot API](https://img.shields.io/badge/DaouOffice%20Bot%20API-v.0.1.5-00aced.svg)](https://github.com/DAOUBOT/daouoffice-bot-api/blob/master/docs/api.md) [![Build Status](https://travis-ci.org/DAOUBOT/daouoffice-bot-api.svg?branch=master)](https://travis-ci.org/DAOUBOT/daouoffice-bot-api) [![Node Version](https://img.shields.io/node/v/passport.svg)](https://nodejs.org/en/) [![DaouOffice Version](https://img.shields.io/badge/DaouOffice(Custom)-%3E%3D%202.5.4.0-orange.svg)](http://bot.terracetech.co.kr)
 
-# Node.js DaouOffice Bot Api
-[![DaouOffice Bot API](https://img.shields.io/badge/DaouOffice%20Bot%20API-v.0.1.3-00aced.svg)](https://github.com/DAOUBOT/daouoffice-bot-api/blob/master/docs/api.md)
-[![Build Status](https://travis-ci.org/DAOUBOT/daouoffice-bot-api.svg?branch=master)](https://travis-ci.org/DAOUBOT/daouoffice-bot-api)
-[![Node Version](https://img.shields.io/node/v/passport.svg)](https://nodejs.org/en/)
-[![DaouOffice Version](https://img.shields.io/badge/DaouOffice(Custom)-%3E%3D%202.5.4.0-orange.svg)](http://bot.terracetech.co.kr)
+Node.js module to interact with official DaouOffice Bot API. A bot apikey is required and can be obtained by http://bot.terracetech.co.kr:8000
 
-Node.js module to interact with official DaouOffice Bot API. 
-A bot apikey is required and can be obtained by http://bot.terracetech.co.kr:8000
-
-## Install
+Install
+-------
 
 ```bash
 npm install --save daouoffice-bot-api
 ```
 
-## Usage
+Usage
+-----
 
 ```js
 const DaouOfficeBot = require('daouoffice-bot-api');
@@ -23,7 +21,7 @@ const DaouOfficeBot = require('daouoffice-bot-api');
 // http://bot.terracetech.co.kr:8000에서 발급받은 apikey를 입력
 const options = {
 	"daouApiUrl" : "http://bot.terracetech.co.kr:8000",
-	"port" : 3000,
+	"botServerPort" : 3000,
 	"apiKey" : "YOUR_API_KEY"
 };
 
@@ -43,14 +41,16 @@ bot.on('message',(result) => {
 	}).catch(function(err){
 		console.log(err);
 	});
-	
+
 });
 ```
 
-## Documentation
+Documentation
+-------------
 
-* [API Reference](https://github.com/DAOUBOT/daouoffice-bot-api/blob/master/docs/api.md)
+-	[API Reference](https://github.com/DAOUBOT/daouoffice-bot-api/blob/master/docs/api.md)
 
-## License
+License
+-------
 
 **The MIT License (MIT)**
