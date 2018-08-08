@@ -1,12 +1,12 @@
 {
   "name": "daouoffice-bot-api",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "DaouOffice Bot API",
   "main": "./index.js",
   "scripts": {
     "start": "node index.js",
     "test": "mocha",
-    "report" : "mocha --reporter mochawesome"
+    "report": "mocha --reporter mochawesome"
   },
   "keywords": [
     "daouoffice bot api"
@@ -23,7 +23,7 @@
   "devDependencies": {
     "mocha": "^5.2.0",
     "mochawesome": "^3.0.3",
-    "nock": "^9.4.3"
+    "nock": "^9.4.4"
   },
   "repository": {
     "type": "git",

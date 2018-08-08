@@ -25,39 +25,39 @@ All types used in the Daouoffice Bot API responses are represented as JSON-objec
 
 ### ReceiveInfo
 
-| Field    | Type                  | Description                                                   |
-|----------|-----------------------|---------------------------------------------------------------|
-| chatKey  | String                | Types of chat rooms that contain bots (SINGLE or ROOM)        |
-| message  | [Message](#message)   | Unique identifier for the message recipient(userId or roomId) |
-| chatInfo | [Chat](#chat)         | Text of the message to be sent                                |
-| from     | [ChatUser](#chatUser) | Text of the message to be sent                                |
-| date     | String                | Text of the message to be sent                                |
+| Field    | Type                               | Description                                                   |
+|----------|------------------------------------|---------------------------------------------------------------|
+| chatKey  | <code>String</code>                | Types of chat rooms that contain bots (SINGLE or ROOM)        |
+| message  | <code>[Message](#message)</code>   | Unique identifier for the message recipient(userId or roomId) |
+| chatInfo | <code>[Chat](#chat)</code>         | Text of the message to be sent                                |
+| from     | <code>[ChatUser](#chatUser)</code> | Text of the message to be sent                                |
+| date     | <code>String</code>                | Text of the message to be sent                                |
 
 <a name="message"></a>
 
 ### Message
 
-| Field   | Type   | Description                            |
-|---------|--------|----------------------------------------|
-| type    | String | Types of message (NORMAL, IMAGE, FILE) |
-| content | String | Text of the message to be sent         |
+| Field   | Type                | Description                            |
+|---------|---------------------|----------------------------------------|
+| type    | <code>String</code> | Types of message (NORMAL, IMAGE, FILE) |
+| content | <code>String</code> | Text of the message to be sent         |
 
 <a name="chat"></a>
 
 ### Chat
 
-| Field   | Type                           | Description                     |
-|---------|--------------------------------|---------------------------------|
-| type    | String                         | Types of rooms (SINGLE or ROOM) |
-| members | Array of [ChatUser](#chatUser) | members of room                 |
+| Field   | Type                                        | Description                     |
+|---------|---------------------------------------------|---------------------------------|
+| type    | <code>String</cod>                          | Types of rooms (SINGLE or ROOM) |
+| members | <code>Array of [ChatUser](#chatUser)</code> | members of room                 |
 
 <a name="chatUser"></a>
 
 ### ChatUser
 
-| Field  | Type    | Description                    |
-|--------|---------|--------------------------------|
-| seqId  | String  | Unique identifier for the user |
-| userId | String  | email ID of user               |
-| isBot  | boolean | bot or user                    |
-| name   | String  | name of user                   |
+| Field  | Type                 | Description                    |
+|--------|----------------------|--------------------------------|
+| seqId  | <code>String</code>  | Unique identifier for the user |
+| userId | <code>String</code>  | email ID of user               |
+| isBot  | <code>boolean</code> | bot or user                    |
+| name   | <code>String</code>  | name of user                   |
