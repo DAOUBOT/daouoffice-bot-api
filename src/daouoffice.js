@@ -74,7 +74,8 @@ class DaouOfficeBot extends EventEmitter{
 	start() {
 		this._webServer = http.createServer(this.app);
 		this._webServer.listen(this.app.get('port'), () => {
-			 //console.log('botserver listening on port : ' + this.app.get('port'));
+			 console.log("botserver start");
+			 console.log('botserver listening on port : ' + this.app.get('port'));
 		});
 	}
 
@@ -85,6 +86,7 @@ class DaouOfficeBot extends EventEmitter{
 	stop() {
         this._webServer.close();
     }
+	
 	/**
 	 * 이벤트를 등록한다.
 	 * This is the usual `emitter.on()` method.
@@ -95,24 +97,33 @@ class DaouOfficeBot extends EventEmitter{
 	on(event, listener) {
 	    super.on(event, listener);
 	}
-
+	
 	/**
 	 * 텍스트 메시지를 전송한다.
-	 * @param  {String} 보낼곳의 방 종류 (SINGLE , ROOM)
-	 * @param  {String} 보낼곳의 방id 나 메시지 수신자의 id
-	 * @param  {String} 보낼 메시지 내용
+	 * @param  {String} 보낼곳의 방 seq 
+	 * @param  {Object} 보낼곳의 방 Info
+	 * @param  {Object} cardInfo 형태나 보낼 메시지 내용(json)
 	 * @return {Promise}
 	 */
-	sendMessage(chatKey,text){
+	sendMessage(buddySeq,chatInfo,message){
+		
 		let param = {
             "apiKey":this.apiKey,
-	        "chatKey" : chatKey,
 	        "message" : {
-	        	"type" : "NORMAL",
-	            "content" : text
+	        	"type" : message.type,
+	            "content" : message.content
 	        }
 		}
-		return this._request('buddies',param);
+		
+		return this._request(this._getChatType(chatInfo)+"/"+buddySeq,param);
+	}
+	
+	_getChatType(chatInfo){
+		var type = "single";
+		if(chatInfo.type != "SINGLE"){
+			type = "room";
+		}
+		return type;
 	}
 
 	_message(result){
