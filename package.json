@@ -1,6 +1,6 @@
 {
   "name": "daouoffice-bot-api",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "DaouOffice Bot API",
   "main": "./index.js",
   "scripts": {
