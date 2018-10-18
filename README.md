@@ -38,6 +38,40 @@ bot.on('message',(result) => {
 		type : "text",
 		content : result.message.content
 	}
+	
+	// 카드형식일때
+	/*var message = {
+			type : "card",
+			content : [
+				{
+					title:"test",
+					imageUrl:"tttt",
+					linkUrl:"xxxx",
+					description:"333",
+					button : [
+						{
+							name : "btn1",
+							type : "url",
+							url : "aaaa",
+						}
+					]
+				},
+				{
+					title:"test2",
+					imageUrl:"yyyyy",
+					linkUrl:"aaaa",
+					description:"xxxxx",
+					button : [
+						{
+							name : "btn1",
+							type : "url",
+							url : "aaaa",
+						}
+					]
+				}
+				
+			]		
+	};*/
 
 	//send message (echo)
 	bot.sendMessage(result.buddySeq,result.chatInfo,message)
