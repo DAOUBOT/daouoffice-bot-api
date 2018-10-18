@@ -20,7 +20,7 @@ const DaouOfficeBot = require('daouoffice-bot-api');
 
 // http://bot.terracetech.co.kr:8000에서 발급받은 apikey를 입력
 const options = {
-	"daouApiUrl" : "http://bot.terracetech.co.kr:8000",
+	"daouApiUrl" : "http://bot.terracetech.co.kr",
 	"botServerPort" : 3000,
 	"apiKey" : "YOUR_API_KEY"
 };
@@ -40,7 +40,7 @@ bot.on('message',(result) => {
 	}
 
 	//send message (echo)
-	daoubot.sendMessage(result.buddySeq,result.chatInfo,message)
+	bot.sendMessage(result.buddySeq,result.chatInfo,message)
 	.then(function(o){
 		console.log(o);
 	}).catch(function(err){
